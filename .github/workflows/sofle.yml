@@ -3,8 +3,7 @@
 # rename the name below so that you can see the different keyboards in your github actions
 name: Sofle
 
-# You will need to manually trigger this workflow
-on:  ['workflow_dispatch']
+on:  ['push','workflow_dispatch']
 
 jobs:
   initialize-firmware:
@@ -17,7 +16,7 @@ jobs:
         # Only 1 keyboard is supported.  For more keyboards, copy and rename this file.
         keyboard: ['sofle']
         # Keymap of the keyboard to setup.  Multiple keymaps can be setup following this example: ['default','jpconstantineau']
-        keymap: ['default']
+        keymap: ['sofle']
         # keyboard configuration. Multiple configs can be setup following this example: ['left','right']
         keyboard_config: ['left','right']
         # hardware configuration. must have both components of the path in the BlueMicro_BLE keyboard examples path
