@@ -69,8 +69,8 @@ jobs:
         run: |
           cp BlueMicro_BLE/firmware/keyboards/${{ matrix.keyboard }}/config/left/keyboard_config.h ${{ steps.job_variables.outputs.firmware-name }}
           cp ${{ steps.job_variables.outputs.hardware-config }} ${{ steps.job_variables.outputs.firmware-name }}
-          cp BlueMicro_BLE/firmware/keyboards/${{ matrix.keyboard }}/keymaps/${{ matrix.keymap }}/keymap.h ${{ steps.job_variables.outputs.firmware-name }}
-          cp BlueMicro_BLE/firmware/keyboards/${{ matrix.keyboard }}/keymaps/${{ matrix.keymap }}/keymap.cpp ${{ steps.job_variables.outputs.firmware-name }} 
+          cp BlueMicro_BLE/firmware/keyboards/${{ matrix.keyboard }}/keymaps/default/keymap.h ${{ steps.job_variables.outputs.firmware-name }}
+          cp BlueMicro_BLE/firmware/keyboards/${{ matrix.keyboard }}/keymaps/default/keymap.cpp ${{ steps.job_variables.outputs.firmware-name }} 
       - name: remove BlueMicro_BLE repository
         if: ${{ steps.job_conditions.outputs.firmware-here == 'false' }}
         run: |
